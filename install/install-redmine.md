@@ -4,7 +4,13 @@
 
 > 資料來源 : [Redmine - 維基百科，自由的百科全書](http://zh.wikipedia.org/wiki/Redmine)
 
+## 環境
 
+> Redmine : 2.5.1
+
+> Ruby : 1.9.3
+
+> Passenger : 4.0.45
 
 ## 建立 Redmine 在 MySQL需要的帳號密碼
 

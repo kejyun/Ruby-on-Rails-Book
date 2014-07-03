@@ -1,5 +1,13 @@
 # 安裝 Passenger
 
+## 環境
+
+> Ubuntu : 12.04 LTS
+
+> Ruby : 1.9.3
+
+> Passenger : 4.0.45
+
 *在安裝完 apache 2.2 後，不要對 apache 設定檔進行任何修改，在安裝 Passenger 實會修改 Apache 核心及設定檔，若有自己的設定檔，請自行備份，確認不要被新的設定檔覆蓋了*
 
 ## 使用 Gem 安裝 Passenger

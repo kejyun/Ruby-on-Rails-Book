@@ -12,7 +12,7 @@
 
 > Ruby : 1.9.3
 
-> Passenger :
+> Passenger : 4.0.45
 
 # 備註
 
