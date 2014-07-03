@@ -130,9 +130,72 @@ Default configuration data loaded.
 
 *命令列會提示預設語言，按ENTER使用預設的`英語`。或輸入`zh-TW`設定使用繁體中文的語言*
 
+## 設定 Redmine 帳號
 
 
+```shell
+$ cd /usr/share/redmine
+$ mkdir public/plugin_assets
+//記得將user-account換成自已的帳號
+$ sudo chown -R user-account:www-data files log tmp public/plugin_assets config.ru
+$ sudo chmod -R 775 files log tmp public/plugin_assets
+```
+
+## 測試 Redmine
+
+```shell
+// 使用ruby 3.1以上和rails 4.0以上版本，請用以下指令
+$ ruby script/rails server webrick -e production
+```
+
+*打開ubuntu中的firefox，網址打入`0.0.0.0:3000`，有看到redmine的首頁就表示安裝成功了！*
+
+## 測試 Redmine 在 Apache 是否可以正常運作
+
+*依照之前設定的虛擬主機設定*
+
+* 名稱 : dev.redmine
+* 目錄 : /usr/share/redmine/public
 
 
+```
+<VirtualHost *:80>
+  ServerName dev.redmine
+  # !!! Be sure to point DocumentRoot to 'public'!
+  DocumentRoot /usr/share/redmine/public
+  <Directory /usr/share/redmine/public>
+     # This relaxes Apache security settings.
+     AllowOverride all
+     # MultiViews must be turned off.
+     Options -MultiViews
+     # Uncomment this if you're on Apache >= 2.4:
+     #Require all granted
+  </Directory>
+</VirtualHost>
+```
 
+**修改 hosts 檔案**
 
+*因為這個主機名稱是我們自訂的，可以修改hosts檔案，指定`dev.redmine`導向到本地主機`127.0.0.1`*
+
+```shell
+$ sudo vim /etc/hosts
+```
+
+*在`hosts`檔案中加入*
+
+```
+127.0.0.1    dev.redmine
+```
+
+**測試 Redmine 在 Apache 執行**
+
+> http://dev.redmine/
+
+## 登入 Redmine
+
+預設的管理者帳密為
+
+> 帳號 : admin
+
+> 密碼 : admin
