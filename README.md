@@ -5,3 +5,5 @@
 Blog : http://blog.kejyun.com
 
 Facebook : http://fb.me/kejyunTaiwan
+
+GitBook : http://ruby-on-rails-book.kejyun.com/
