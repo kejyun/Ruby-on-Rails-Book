@@ -6,4 +6,4 @@ Blog : http://blog.kejyun.com
 
 Facebook : http://fb.me/kejyunTaiwan
 
-gitbook : http://kejyuntw.gitbooks.io/ruby-on-rails-learning-note/
+GitBook : http://kejyuntw.gitbooks.io/ruby-on-rails-learning-note/
