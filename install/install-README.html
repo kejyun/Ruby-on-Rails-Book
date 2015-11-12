@@ -1,0 +1,347 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+        <title>安裝 | Ruby on Rails 學習筆記</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.0.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    <link rel="next" href="../install/install-rvm-ruby-rails.html" />
+    
+    
+    <link rel="prev" href="../index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    
+
+        
+    <div class="book" data-level="1" data-basepath=".." data-revision="Fri Nov 13 2015 07:43:43 GMT+0800 (CST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1" data-path="install/install-README.html">
+            
+                
+                    <a href="../install/install-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        安裝
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="install/install-rvm-ruby-rails.html">
+            
+                
+                    <a href="../install/install-rvm-ruby-rails.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        安裝 RVM、Ruby 和 Rails
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="install/install-apache22-php53-mysql5.html">
+            
+                
+                    <a href="../install/install-apache22-php53-mysql5.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        安裝 Apache、PHP 及 MySQL
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="install/install-passenger.html">
+            
+                
+                    <a href="../install/install-passenger.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        安裝 Passenger
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="install/install-redmine.html">
+            
+                
+                    <a href="../install/install-redmine.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        安裝 Redmine
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="learning-resource/learning-resource-README.html">
+            
+                
+                    <a href="../learning-resource/learning-resource-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        學習資源
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="learning-resource/learning-resource-api.html">
+            
+                
+                    <a href="../learning-resource/learning-resource-api.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        API
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Ruby on Rails 學習筆記</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="%E5%AE%89%E8%A3%9D">&#x5B89;&#x88DD;</h1>
+<p><strong>&#x6E2C;&#x8A66;&#x65E5;&#x671F; 2014-07-02</strong></p>
+<h2 id="%E7%92%B0%E5%A2%83">&#x74B0;&#x5883;</h2>
+<blockquote>
+<p>Ubuntu : 12.04 LTS</p>
+<p>Apache 2.2</p>
+<p>PHP 5.3</p>
+<p>Ruby : 1.9.3</p>
+<p>Passenger : 4.0.45</p>
+</blockquote>
+<h1 id="%E5%82%99%E8%A8%BB">&#x5099;&#x8A3B;</h1>
+<p>&#x5343;&#x842C;&#x4E0D;&#x8981;&#x5C07; Apache &#x5347;&#x7D1A;&#x81F3; 2.4 &#x7248;&#xFF0C;&#x6216;&#x5C07; PHP &#x5347;&#x7D1A;&#x81F3;5.5&#x7248;&#xFF0C;Passenger Apache&#x5916;&#x639B;&#x76EE;&#x524D;&#x53EA;&#x652F;&#x63F4; Apache 2.2&#x7248;&#xFF0C;&#x6211;&#x50BB;&#x50BB;&#x7684;&#x5347;&#x7D1A;&#x5230;&#x4E86;2.4&#xFF0C;&#x4E00;&#x76F4;&#x51FA;&#x73FE;&#x885D;&#x7A81;&#x7121;&#x6CD5;&#x5B89;&#x88DD;&#x6B63;&#x78BA;&#x7684;&#x5957;&#x4EF6;&#xFF0C;&#x770B;&#x770B;&#x4E4B;&#x5F8C;&#x4EC0;&#x9EBC;&#x6642;&#x5019;&#x6703;&#x652F;&#x63F4; 2.4 &#x7248;&#x7684; Apache</p>
+<p>&#x4E5F;&#x5343;&#x842C;&#x4E0D;&#x8981;&#x5C07; PHP &#x5F9E; 5.3 &#x5347;&#x7D1A;&#x81F3; 5.5&#xFF0C;&#x4ED6;&#x6703;&#x5E6B;&#x4F60;&#x9023; Apache &#x4E00;&#x8D77;&#x5347;&#x7D1A;&#x5230; 2.4 &#x7248;&#xFF0C;&#x4E00;&#x5347;&#x7D1A;&#x5F8C;&#x6574;&#x500B;GG&#xFF0C;&#x70BA;&#x4E86;&#x5B89;&#x88DD; Passenger Apache &#x5957;&#x4EF6;&#x5361;&#x4E86;&#x5F88;&#x4E45;</p>
+<h1 id="%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99">&#x53C3;&#x8003;&#x8CC7;&#x6599;</h1>
+<ul>
+<li><a href="http://mrtonychen.wordpress.com/2013/08/26/using-source-package-%E5%AE%89%E8%A3%9D-redmine-2-3-2-with-ubuntu-13-04/" target="_blank">Using Source Package&#x67B6;&#x8A2D;redmine&#x505A;&#x5C08;&#x6848;&#x7BA1;&#x7406;Step By Step with Ubuntu 13.04</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-rails-apache-and-mysql-on-ubuntu-with-passenger" target="_blank">How To Install Rails, Apache, and MySQL on Ubuntu with Passenger | DigitalOcean</a></li>
+<li><a href="http://www.kenming.idv.tw/note_install_rvm-and-ruby_at-ubuntu-13-04-x64" target="_blank">[&#x5099;&#x8A3B;] &#x5B89;&#x88DD; RVM and Ruby@Ubuntu 13.04 x64 | Kenming&#x306E;&#x9BAE;&#x601D;&#x7DAD;</a></li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../index.html" class="navigation navigation-prev " aria-label="Previous page: Introduction"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../install/install-rvm-ruby-rails.html" class="navigation navigation-next " aria-label="Next page: 安裝 RVM、Ruby 和 Rails"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"disqus":{"shortName":"kejyun-ruby-on-rails-books"}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

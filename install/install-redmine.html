@@ -1,0 +1,460 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+        <title>安裝 Redmine | Ruby on Rails 學習筆記</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.0.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    <link rel="next" href="../learning-resource/learning-resource-README.html" />
+    
+    
+    <link rel="prev" href="../install/install-passenger.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    
+
+        
+    <div class="book" data-level="1.4" data-basepath=".." data-revision="Fri Nov 13 2015 07:43:43 GMT+0800 (CST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="install/install-README.html">
+            
+                
+                    <a href="../install/install-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        安裝
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="install/install-rvm-ruby-rails.html">
+            
+                
+                    <a href="../install/install-rvm-ruby-rails.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        安裝 RVM、Ruby 和 Rails
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="install/install-apache22-php53-mysql5.html">
+            
+                
+                    <a href="../install/install-apache22-php53-mysql5.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        安裝 Apache、PHP 及 MySQL
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="install/install-passenger.html">
+            
+                
+                    <a href="../install/install-passenger.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        安裝 Passenger
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="install/install-redmine.html">
+            
+                
+                    <a href="../install/install-redmine.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        安裝 Redmine
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="learning-resource/learning-resource-README.html">
+            
+                
+                    <a href="../learning-resource/learning-resource-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        學習資源
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="learning-resource/learning-resource-api.html">
+            
+                
+                    <a href="../learning-resource/learning-resource-api.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        API
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Ruby on Rails 學習筆記</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="%E5%AE%89%E8%A3%9D-redmine">&#x5B89;&#x88DD; Redmine</h1>
+<blockquote>
+<p>Redmine &#x662F;&#x4E00;&#x500B;&#x7DB2;&#x9801;&#x754C;&#x9762;&#x7684;&#x5C08;&#x6848;&#x7BA1;&#x7406;&#x8207;&#x7F3A;&#x9677;&#x8DDF;&#x8E64;&#x7BA1;&#x7406;&#x7CFB;&#x7D71;&#x7684;&#x81EA;&#x7531;&#x53CA;&#x958B;&#x653E;&#x539F;&#x4EE3;&#x78BC;&#x7684;&#x8EDF;&#x9AD4;&#x5DE5;&#x5177;&#x3002;&#x5B83;&#x6574;&#x5408;&#x4E86;&#x5C08;&#x6848;&#x7BA1;&#x7406;&#x6240;&#x9700;&#x7684;&#x5404;&#x9805;&#x529F;&#x80FD;&#xFF1A;&#x65E5;&#x66C6; &#x548C; &#x7518;&#x7279;&#x5716; &#x4EE5;&#x5354;&#x52A9;&#x8996;&#x89BA;&#x5316;&#x8868;&#x73FE;&#x5C08;&#x6848;&#x8207;&#x6642;&#x9593;&#x9650;&#x5236;&#xFF0C;&#x4E8B;&#x4EF6;&#x8FFD;&#x8E64;&#x548C;&#x7248;&#x672C;&#x63A7;&#x5236;&#x3002;&#x6B64;&#x5916;&#xFF0C;Redmine&#x4E5F;&#x53EF;&#x4EE5;&#x540C;&#x6642;&#x8655;&#x7406;&#x591A;&#x500B;&#x9805;&#x76EE;&#x3002;</p>
+<p>&#x8CC7;&#x6599;&#x4F86;&#x6E90; : <a href="http://zh.wikipedia.org/wiki/Redmine" target="_blank">Redmine - &#x7DAD;&#x57FA;&#x767E;&#x79D1;&#xFF0C;&#x81EA;&#x7531;&#x7684;&#x767E;&#x79D1;&#x5168;&#x66F8;</a></p>
+</blockquote>
+<h2 id="%E7%92%B0%E5%A2%83">&#x74B0;&#x5883;</h2>
+<blockquote>
+<p>Redmine : 2.5.1</p>
+<p>Ruby : 1.9.3</p>
+<p>Passenger : 4.0.45</p>
+</blockquote>
+<h2 id="%E5%BB%BA%E7%AB%8B-redmine-%E5%9C%A8-mysql%E9%9C%80%E8%A6%81%E7%9A%84%E5%B8%B3%E8%99%9F%E5%AF%86%E7%A2%BC">&#x5EFA;&#x7ACB; Redmine &#x5728; MySQL&#x9700;&#x8981;&#x7684;&#x5E33;&#x865F;&#x5BC6;&#x78BC;</h2>
+<pre><code>$ mysql -u root -p
+Enter password:
+
+mysql&gt;CREATE DATABASE redmine CHARACTER SET utf8;
+mysql&gt;CREATE USER &apos;redmine&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;my_password&apos;;
+mysql&gt;GRANT ALL PRIVILEGES ON redmine.* TO &apos;redmine&apos;@&apos;localhost&apos;;
+mysql&gt;flush privileges;
+mysql&gt;exit;
+</code></pre><h2 id="%E4%B8%8B%E8%BC%89-redmine">&#x4E0B;&#x8F09; Redmine</h2>
+<p><em>&#x770B;&#x770B;&#x4F60;&#x5011;&#x5B89;&#x88DD;&#x7684;&#x6642;&#x5019;&#xFF0C;&#x5230;<a href="http://www.redmine.org/projects/redmine/wiki/Download" target="_blank">Redmine&#x5B98;&#x65B9;&#x7DB2;&#x7AD9;</a>&#x770B;&#x53EF;&#x4E0B;&#x8F09;&#x677F;&#x672C;&#x70BA;&#x4F55;&#xFF0C;&#x5728;&#x81EA;&#x5DF1;&#x8ABF;&#x6574;&#x4E0B;&#x8F09;&#x6307;&#x4EE4;</em></p>
+<pre><code class="lang-shell">$ wget http://www.redmine.org/releases/redmine-2.5.1.tar.gz
+$ tar -xzvf redmine-2.5.1.tar.gz
+</code></pre>
+<h2 id="%E7%A7%BB%E5%8B%95-redmine-%E7%9B%B8%E9%97%9C%E6%AA%94%E6%A1%88">&#x79FB;&#x52D5; Redmine &#x76F8;&#x95DC;&#x6A94;&#x6848;</h2>
+<pre><code class="lang-shell">$ sudo mv redmine-2.5.1 /usr/share
+</code></pre>
+<h2 id="%E8%A8%AD%E5%AE%9A-redmine-%E8%B3%87%E6%96%99%E5%A4%BE%E9%80%A3%E7%B5%90">&#x8A2D;&#x5B9A; Redmine &#x8CC7;&#x6599;&#x593E;&#x9023;&#x7D50;</h2>
+<p><em>&#x5C07;<code>/usr/share/redmine</code>&#x9023;&#x7D50;&#x5230;<code>/usr/share/redmine-2.5.1</code></em></p>
+<pre><code class="lang-shell">$ sudo ln -s /usr/share/redmine-2.5.1 /usr/share/redmine
+</code></pre>
+<h2 id="%E8%A4%87%E8%A3%BD%E4%B8%A6%E8%A8%AD%E5%AE%9A-redmine-%E8%B3%87%E6%96%99%E5%BA%AB%E8%A8%AD%E5%AE%9A%E6%AA%94">&#x8907;&#x88FD;&#x4E26;&#x8A2D;&#x5B9A; Redmine &#x8CC7;&#x6599;&#x5EAB;&#x8A2D;&#x5B9A;&#x6A94;</h2>
+<pre><code>$ cp /usr/share/redmine/config/database.yml.example /usr/share/redmine/config/database.yml
+
+$ vim /usr/share/redmine/config/database.yml
+</code></pre><p><em>&#x5C07; MySQL &#x8CC7;&#x6599;&#x5EAB;&#x7684;&#x5E33;&#x865F;&#x5BC6;&#x78BC;&#x8A2D;&#x5B9A;&#x5230;&#x8A2D;&#x5B9A;&#x6A94;&#x4E2D;</em></p>
+<pre><code>production:
+  adapter: mysql2
+  database: redmine
+  host: localhost
+  username: redmine
+  password: &quot;my_password&quot;
+  encoding: utf8
+</code></pre><h2 id="%E8%A4%87%E8%A3%BD%E4%B8%A6%E8%A8%AD%E5%AE%9A-redmine-%E7%9B%B8%E9%97%9C%E8%A8%AD%E5%AE%9A">&#x8907;&#x88FD;&#x4E26;&#x8A2D;&#x5B9A; Redmine &#x76F8;&#x95DC;&#x8A2D;&#x5B9A;</h2>
+<pre><code>$ cp /usr/share/redmine/config/configuration.yml.example /usr/share/redmine/config/configuration.yml
+
+$ vim /usr/share/redmine/config/configuration.yml
+</code></pre><p><em>&#x4F7F;&#x7528; Gmail SMTP &#x4F3A;&#x670D;&#x5668;&#x4F5C;&#x5BC4;&#x9001;&#x7684;&#x670D;&#x52D9;</em></p>
+<pre><code>production:
+  email_delivery:
+  delivery_method: :smtp
+  smtp_settings:
+    #tls: true
+    enable_starttls_auto: true
+    address: &quot;smtp.gmail.com&quot;
+    port: 587
+    domain: &quot;smtp.gmail.com&quot; # &apos;your.domain.com&apos; for GoogleApps
+    authentication: :plain
+    user_name: &quot;your_email@gmail.com&quot;
+    password: &quot;your_password&quot;
+</code></pre><p><em>&#x8A18;&#x5F97;&#x8981;&#x5C07;<code>tls: true</code>&#x9019;&#x4E00;&#x884C;&#x62FF;&#x6389;&#xFF0C;&#x5426;&#x5247;&#x6703;&#x767C;&#x751F; SSL error&#x3002;</em></p>
+<h2 id="%E5%AE%89%E8%A3%9D%E5%8F%8A%E8%A8%AD%E5%AE%9A-bundler">&#x5B89;&#x88DD;&#x53CA;&#x8A2D;&#x5B9A; Bundler</h2>
+<pre><code class="lang-shell">$ gem install bundler --no-rdoc --no-ri
+$ sudo apt-get install libmagickwand-dev libmysql-ruby libmysqlclient-dev
+$ gem install mysql2
+$ cd /usr/share/redmine
+$ bundle install --without development test postgresql sqlite
+</code></pre>
+<h2 id="%E7%94%A2%E7%94%9F-session-store-secret">&#x7522;&#x751F; session store secret</h2>
+<pre><code class="lang-shell">$ rake generate_secret_token
+</code></pre>
+<p><em>&#x5982;&#x679C;&#x767C;&#x751F; mysql &#x932F;&#x8AA4;&#xFF0C;&#x9700;&#x8981;&#x518D;&#x5B89;&#x88DD; gem &#x7684;<code>mysql2</code></em></p>
+<h2 id="%E7%94%A2%E7%94%9F%E4%B8%A6%E5%BB%BA%E7%AB%8B-redmine-%E8%B3%87%E6%96%99%E5%BA%AB">&#x7522;&#x751F;&#x4E26;&#x5EFA;&#x7ACB; Redmine &#x8CC7;&#x6599;&#x5EAB;</h2>
+<pre><code>$ cd /usr/share/redmine
+$ RAILS_ENV=production rake db:migrate
+</code></pre><h2 id="%E7%94%A2%E7%94%9F-redmine-%E9%A0%90%E8%A8%AD%E7%9A%84%E7%B5%84%E6%85%8B%E8%B3%87%E6%96%99">&#x7522;&#x751F; Redmine &#x9810;&#x8A2D;&#x7684;&#x7D44;&#x614B;&#x8CC7;&#x6599;</h2>
+<pre><code class="lang-shell">$ cd /usr/share/redmine
+$ RAILS_ENV=production rake redmine:load_default_data
+
+Select language: ar, az, bg, bs, ca, cs, da, de, el, en, en-GB, es, et, eu, fa, fi, fr, gl, he, hr, hu, id, it, ja, ko, lt, lv, mk, mn, nl, no, pl, pt, pt-BR, ro, ru, sk, sl, sq, sr, sr-YU, sv, th, tr, uk, vi, zh, zh-TW [en] zh-TW
+====================================
+Default configuration data loaded.
+</code></pre>
+<p><em>&#x547D;&#x4EE4;&#x5217;&#x6703;&#x63D0;&#x793A;&#x9810;&#x8A2D;&#x8A9E;&#x8A00;&#xFF0C;&#x6309;ENTER&#x4F7F;&#x7528;&#x9810;&#x8A2D;&#x7684;<code>&#x82F1;&#x8A9E;</code>&#x3002;&#x6216;&#x8F38;&#x5165;<code>zh-TW</code>&#x8A2D;&#x5B9A;&#x4F7F;&#x7528;&#x7E41;&#x9AD4;&#x4E2D;&#x6587;&#x7684;&#x8A9E;&#x8A00;</em></p>
+<h2 id="%E8%A8%AD%E5%AE%9A-redmine-%E5%B8%B3%E8%99%9F">&#x8A2D;&#x5B9A; Redmine &#x5E33;&#x865F;</h2>
+<pre><code class="lang-shell">$ cd /usr/share/redmine
+$ mkdir public/plugin_assets
+//&#x8A18;&#x5F97;&#x5C07;user-account&#x63DB;&#x6210;&#x81EA;&#x5DF2;&#x7684;&#x5E33;&#x865F;
+$ sudo chown -R user-account:www-data files log tmp public/plugin_assets config.ru
+$ sudo chmod -R 775 files log tmp public/plugin_assets
+</code></pre>
+<h2 id="%E6%B8%AC%E8%A9%A6-redmine">&#x6E2C;&#x8A66; Redmine</h2>
+<pre><code class="lang-shell">// &#x4F7F;&#x7528;ruby 3.1&#x4EE5;&#x4E0A;&#x548C;rails 4.0&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#xFF0C;&#x8ACB;&#x7528;&#x4EE5;&#x4E0B;&#x6307;&#x4EE4;
+$ ruby script/rails server webrick -e production
+</code></pre>
+<p><em>&#x6253;&#x958B;ubuntu&#x4E2D;&#x7684;firefox&#xFF0C;&#x7DB2;&#x5740;&#x6253;&#x5165;<code>0.0.0.0:3000</code>&#xFF0C;&#x6709;&#x770B;&#x5230;redmine&#x7684;&#x9996;&#x9801;&#x5C31;&#x8868;&#x793A;&#x5B89;&#x88DD;&#x6210;&#x529F;&#x4E86;&#xFF01;</em></p>
+<h2 id="%E6%B8%AC%E8%A9%A6-redmine-%E5%9C%A8-apache-%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E6%AD%A3%E5%B8%B8%E9%81%8B%E4%BD%9C">&#x6E2C;&#x8A66; Redmine &#x5728; Apache &#x662F;&#x5426;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x904B;&#x4F5C;</h2>
+<p><em>&#x4F9D;&#x7167;&#x4E4B;&#x524D;&#x8A2D;&#x5B9A;&#x7684;&#x865B;&#x64EC;&#x4E3B;&#x6A5F;&#x8A2D;&#x5B9A;</em></p>
+<ul>
+<li>&#x540D;&#x7A31; : dev.redmine</li>
+<li>&#x76EE;&#x9304; : /usr/share/redmine/public</li>
+</ul>
+<pre><code>&lt;VirtualHost *:80&gt;
+  ServerName dev.redmine
+  # !!! Be sure to point DocumentRoot to &apos;public&apos;!
+  DocumentRoot /usr/share/redmine/public
+  &lt;Directory /usr/share/redmine/public&gt;
+     # This relaxes Apache security settings.
+     AllowOverride all
+     # MultiViews must be turned off.
+     Options -MultiViews
+     # Uncomment this if you&apos;re on Apache &gt;= 2.4:
+     #Require all granted
+  &lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+</code></pre><p><strong>&#x4FEE;&#x6539; hosts &#x6A94;&#x6848;</strong></p>
+<p><em>&#x56E0;&#x70BA;&#x9019;&#x500B;&#x4E3B;&#x6A5F;&#x540D;&#x7A31;&#x662F;&#x6211;&#x5011;&#x81EA;&#x8A02;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;hosts&#x6A94;&#x6848;&#xFF0C;&#x6307;&#x5B9A;<code>dev.redmine</code>&#x5C0E;&#x5411;&#x5230;&#x672C;&#x5730;&#x4E3B;&#x6A5F;<code>127.0.0.1</code></em></p>
+<pre><code class="lang-shell">$ sudo vim /etc/hosts
+</code></pre>
+<p><em>&#x5728;<code>hosts</code>&#x6A94;&#x6848;&#x4E2D;&#x52A0;&#x5165;</em></p>
+<pre><code>127.0.0.1    dev.redmine
+</code></pre><p><strong>&#x6E2C;&#x8A66; Redmine &#x5728; Apache &#x57F7;&#x884C;</strong></p>
+<blockquote>
+<p><a href="http://dev.redmine/" target="_blank">http://dev.redmine/</a></p>
+</blockquote>
+<h2 id="%E7%99%BB%E5%85%A5-redmine">&#x767B;&#x5165; Redmine</h2>
+<p>&#x9810;&#x8A2D;&#x7684;&#x7BA1;&#x7406;&#x8005;&#x5E33;&#x5BC6;&#x70BA;</p>
+<blockquote>
+<p>&#x5E33;&#x865F; : admin</p>
+<p>&#x5BC6;&#x78BC; : admin</p>
+</blockquote>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../install/install-passenger.html" class="navigation navigation-prev " aria-label="Previous page: 安裝 Passenger"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../learning-resource/learning-resource-README.html" class="navigation navigation-next " aria-label="Next page: 學習資源"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"disqus":{"shortName":"kejyun-ruby-on-rails-books"}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

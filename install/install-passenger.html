@@ -1,0 +1,454 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+        <title>安裝 Passenger | Ruby on Rails 學習筆記</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.0.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    <link rel="next" href="../install/install-redmine.html" />
+    
+    
+    <link rel="prev" href="../install/install-apache22-php53-mysql5.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    
+
+        
+    <div class="book" data-level="1.3" data-basepath=".." data-revision="Fri Nov 13 2015 07:43:43 GMT+0800 (CST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="install/install-README.html">
+            
+                
+                    <a href="../install/install-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        安裝
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="install/install-rvm-ruby-rails.html">
+            
+                
+                    <a href="../install/install-rvm-ruby-rails.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        安裝 RVM、Ruby 和 Rails
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="install/install-apache22-php53-mysql5.html">
+            
+                
+                    <a href="../install/install-apache22-php53-mysql5.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        安裝 Apache、PHP 及 MySQL
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="install/install-passenger.html">
+            
+                
+                    <a href="../install/install-passenger.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        安裝 Passenger
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="install/install-redmine.html">
+            
+                
+                    <a href="../install/install-redmine.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        安裝 Redmine
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="learning-resource/learning-resource-README.html">
+            
+                
+                    <a href="../learning-resource/learning-resource-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        學習資源
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="learning-resource/learning-resource-api.html">
+            
+                
+                    <a href="../learning-resource/learning-resource-api.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        API
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Ruby on Rails 學習筆記</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="%E5%AE%89%E8%A3%9D-passenger">&#x5B89;&#x88DD; Passenger</h1>
+<h2 id="%E7%92%B0%E5%A2%83">&#x74B0;&#x5883;</h2>
+<blockquote>
+<p>Ubuntu : 12.04 LTS</p>
+<p>Ruby : 1.9.3</p>
+<p>Passenger : 4.0.45</p>
+</blockquote>
+<p><em>&#x5728;&#x5B89;&#x88DD;&#x5B8C; apache 2.2 &#x5F8C;&#xFF0C;&#x4E0D;&#x8981;&#x5C0D; apache &#x8A2D;&#x5B9A;&#x6A94;&#x9032;&#x884C;&#x4EFB;&#x4F55;&#x4FEE;&#x6539;&#xFF0C;&#x5728;&#x5B89;&#x88DD; Passenger &#x5BE6;&#x6703;&#x4FEE;&#x6539; Apache &#x6838;&#x5FC3;&#x53CA;&#x8A2D;&#x5B9A;&#x6A94;&#xFF0C;&#x82E5;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x8A2D;&#x5B9A;&#x6A94;&#xFF0C;&#x8ACB;&#x81EA;&#x884C;&#x5099;&#x4EFD;&#xFF0C;&#x78BA;&#x8A8D;&#x4E0D;&#x8981;&#x88AB;&#x65B0;&#x7684;&#x8A2D;&#x5B9A;&#x6A94;&#x8986;&#x84CB;&#x4E86;</em></p>
+<h2 id="%E4%BD%BF%E7%94%A8-gem-%E5%AE%89%E8%A3%9D-passenger">&#x4F7F;&#x7528; Gem &#x5B89;&#x88DD; Passenger</h2>
+<pre><code>$ gem install passenger
+</code></pre><h2 id="%E5%AE%89%E8%A3%9D-apache-passenger-%E6%A8%A1%E7%B5%84">&#x5B89;&#x88DD; Apache Passenger &#x6A21;&#x7D44;</h2>
+<pre><code class="lang-shell">$ passenger-install-apache2-module
+</code></pre>
+<p><em>&#x5B89;&#x88DD;&#x904E;&#x7A0B;&#x6703;&#x6AA2;&#x67E5;&#x6240;&#x9700;&#x8981;&#x7684;&#x5957;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x767C;&#x751F;&#x932F;&#x8AA4;&#xFF0C;&#x8ACB;&#x4F9D;&#x7167; Passenger &#x7684;&#x6307;&#x793A;&#xFF0C;&#x5B89;&#x88DD;&#x5176;&#x9700;&#x8981;&#x7684;&#x5957;&#x4EF6;</em></p>
+<pre><code>Checking for required software...
+
+ * Checking for C compiler...
+      Found: yes
+      Location: /usr/bin/cc
+ * Checking for C++ compiler...
+      Found: yes
+      Location: /usr/bin/c++
+ * Checking for Curl development headers with SSL support...
+      Found: no
+      Error: Cannot find the `curl-config` command.
+ * Checking for OpenSSL development headers...
+      Found: yes
+      Location: true
+ * Checking for Zlib development headers...
+      Found: yes
+      Location: true
+ * Checking for Apache 2...
+      Found: yes
+      Location of httpd: /usr/sbin/apache2
+      Apache version: 2.2.22
+ * Checking for Apache 2 development headers...
+      Found: no
+ * Checking for Rake (associated with /usr/local/rvm/gems/ruby-1.9.3-p547/wrappers/ruby)...
+      Found: yes
+      Location: /usr/local/rvm/gems/ruby-1.9.3-p547/wrappers/rake
+ * Checking for OpenSSL support for Ruby...
+      Found: yes
+ * Checking for RubyGems...
+      Found: yes
+ * Checking for Ruby development headers...
+      Found: yes
+      Location: /usr/local/rvm/rubies/ruby-1.9.3-p547/include/ruby-1.9.1/ruby.h
+ * Checking for rack...
+      Found: yes
+ * Checking for Apache Portable Runtime (APR) development headers...
+      Found: no
+ * Checking for Apache Portable Runtime Utility (APU) development headers...
+      Found: no
+
+Some required software is not installed.
+But don&apos;t worry, this installer will tell you how to install them.
+Press Enter to continue, or Ctrl-C to abort.
+
+--------------------------------------------
+
+Installation instructions for required software
+
+ * To install Curl development headers with SSL support:
+   Please run apt-get install libcurl4-openssl-dev or libcurl4-gnutls-dev, whichever you prefer.
+
+ * To install Apache 2 development headers:
+   Please install it with apt-get install apache2-threaded-dev
+
+ * To install Apache Portable Runtime (APR) development headers:
+   Please install it with apt-get install libapr1-dev
+
+ * To install Apache Portable Runtime Utility (APU) development headers:
+   Please install it with apt-get install libaprutil1-dev
+</code></pre><p><strong>&#x6211;&#x9019;&#x908A;&#x6B20;&#x7F3A;&#x7684;&#x5957;&#x4EF6;&#x70BA;&#x4E0B;&#x5217;&#x5957;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x518D;&#x91CD;&#x65B0;&#x5B89;&#x88DD;</strong></p>
+<pre><code class="lang-shell">$ sudo apt-get install libcurl4-openssl-dev apache2-threaded-dev libapr1-dev libaprutil1-dev
+</code></pre>
+<p><em>&#x91CD;&#x65B0;&#x5B89;&#x88DD;&#x5B8C;&#x5957;&#x4EF6;&#x5F8C;&#xFF0C;&#x518D;&#x6B21;&#x57F7;&#x884C;<code>passenger-install-apache2-module</code>&#x5B89;&#x88DD; Apache Passenger &#x5957;&#x4EF6;&#x5373;&#x53EF;</em></p>
+<p><em>&#x5B89;&#x88DD;&#x904E;&#x7A0B;&#x6703;&#x9700;&#x8981;&#x7DE8;&#x8B6F; apache &#x5957;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x4E00;&#x9EDE;&#x6642;&#x9593;</em></p>
+<h2 id="%E7%A2%BA%E8%AA%8D-passenger-%E9%9C%80%E8%A6%81%E5%9C%A8-apache-%E8%A8%AD%E5%AE%9A%E7%9A%84%E8%B3%87%E6%96%99">&#x78BA;&#x8A8D; Passenger &#x9700;&#x8981;&#x5728; Apache &#x8A2D;&#x5B9A;&#x7684;&#x8CC7;&#x6599;</h2>
+<p><em>&#x9019;&#x25683;&#x8981;&#x7279;&#x5225;&#x6CE8;&#x610F;&#xFF0C;&#x56E0;&#x70BA;passenger&#x6703;&#x4E00;&#x76F4;&#x66F4;&#x65B0;&#x7248;&#x672C;&#xFF0C;&#x4EE5;&#x4E0B;&#x7684;&#x8A2D;&#x5B9A;<code>&#x5343;&#x842C;&#x4E0D;&#x8981;&#x76F4;&#x63A5;&#x62FF;&#x53BB;&#x8CBC;&#x4E0A;</code>&#xFF0C;&#x5426;&#x5247;&#x6703;&#x51FA;&#x73FE;&#x932F;&#x8AA4;&#x3002;&#x8ACB;&#x76F4;&#x63A5;&#x8907;&#x88FD;&#x5728;apache-passenger&#x5F8C;&#x5728;&#x87A2;&#x5E55;&#x4E0A;&#x986F;&#x793A;&#x7684;&#x6587;&#x5B57;&#x3002;</em></p>
+<pre><code>LoadModule passenger_module /usr/local/rvm/gems/ruby-1.9.3-p547/gems/passenger-4.0.45/buildout/apache2/mod_passenger.so
+&lt;IfModule mod_passenger.c&gt;
+  PassengerRoot /usr/local/rvm/gems/ruby-1.9.3-p547/gems/passenger-4.0.45
+  PassengerDefaultRuby /usr/local/rvm/gems/ruby-1.9.3-p547/wrappers/ruby
+&lt;/IfModule&gt;
+</code></pre><h2 id="%E8%A8%AD%E5%AE%9A-passenger-%E5%9C%A8-apahe-%E7%9A%84%E8%A8%AD%E5%AE%9A%E6%AA%94">&#x8A2D;&#x5B9A; Passenger &#x5728; Apahe &#x7684;&#x8A2D;&#x5B9A;&#x6A94;</h2>
+<p><em>&#x5EFA;&#x7ACB;&#x65B0;&#x7684;&#x8A2D;&#x5B9A;&#x6A94;<code>passenger.conf</code></em></p>
+<pre><code class="lang-shell">$ sudo vim /etc/apache2/conf.d/passenger.conf
+</code></pre>
+<p><em>&#x8CBC;&#x4E0A;&#x4E0A;&#x9762; Passenger &#x7522;&#x751F;&#x7684;&#x8A2D;&#x5B9A;&#x6A94;</em></p>
+<pre><code>LoadModule passenger_module /usr/local/rvm/gems/ruby-1.9.3-p547/gems/passenger-4.0.45/buildout/apache2/mod_passenger.so
+&lt;IfModule mod_passenger.c&gt;
+  PassengerRoot /usr/local/rvm/gems/ruby-1.9.3-p547/gems/passenger-4.0.45
+  PassengerDefaultRuby /usr/local/rvm/gems/ruby-1.9.3-p547/wrappers/ruby
+&lt;/IfModule&gt;
+</code></pre><h2 id="%E8%A8%AD%E5%AE%9A-ruby-on-rails-%E6%AA%94%E6%A1%88%E7%A8%8B%E5%BC%8F%E8%99%9B%E6%93%AC%E6%A9%9F">&#x8A2D;&#x5B9A; Ruby on Rails &#x6A94;&#x6848;&#x7A0B;&#x5F0F;&#x865B;&#x64EC;&#x6A5F;</h2>
+<p><em>&#x63A5;&#x4E0B;&#x4F86;&#x6703;&#x5B89;&#x88DD; Redmine &#x7576;&#x4F5C;&#x6E2C;&#x8A66;&#x7A0B;&#x5F0F;&#xFF0C;&#x6240;&#x4EE5;&#x4EE5;&#x4E0B;&#x4EE5;redmine&#x505A;&#x8A2D;&#x5B9A;&#x7BC4;&#x4F8B;</em></p>
+<p><em>&#x5EFA;&#x7ACB;&#x865B;&#x64EC;&#x4E3B;&#x6A5F;&#x8A2D;&#x5B9A;&#x6A94;<code>redmine</code></em></p>
+<pre><code class="lang-shell">sudo vim /etc/apache2/sites-available/redmine
+</code></pre>
+<p><em>&#x865B;&#x64EC;&#x4E3B;&#x6A5F;&#x8A2D;&#x5B9A;</em></p>
+<ul>
+<li>&#x540D;&#x7A31; : dev.redmine</li>
+<li>&#x76EE;&#x9304; : /usr/share/redmine/public</li>
+</ul>
+<pre><code>&lt;VirtualHost *:80&gt;
+  ServerName dev.redmine
+  # !!! Be sure to point DocumentRoot to &apos;public&apos;!
+  DocumentRoot /usr/share/redmine/public
+  &lt;Directory /usr/share/redmine/public&gt;
+     # This relaxes Apache security settings.
+     AllowOverride all
+     # MultiViews must be turned off.
+     Options -MultiViews
+     # Uncomment this if you&apos;re on Apache &gt;= 2.4:
+     #Require all granted
+  &lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+</code></pre><h2 id="%E5%95%9F%E5%8B%95%E8%99%9B%E6%93%AC%E4%B8%BB%E6%A9%9F%E8%A8%AD%E5%AE%9A%E6%AA%94">&#x555F;&#x52D5;&#x865B;&#x64EC;&#x4E3B;&#x6A5F;&#x8A2D;&#x5B9A;&#x6A94;</h2>
+<pre><code>$ sudo a2ensite redmine
+Enabling site redmine.
+To activate the new configuration, you need to run:
+  service apache2 reload
+</code></pre><h2 id="%E9%87%8D%E6%96%B0%E8%AE%80%E5%8F%96-apache-%E6%96%B0%E7%9A%84%E8%A8%AD%E5%AE%9A">&#x91CD;&#x65B0;&#x8B80;&#x53D6; Apache &#x65B0;&#x7684;&#x8A2D;&#x5B9A;</h2>
+<pre><code class="lang-shell">$ sudo service apache2 reload
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../install/install-apache22-php53-mysql5.html" class="navigation navigation-prev " aria-label="Previous page: 安裝 Apache、PHP 及 MySQL"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../install/install-redmine.html" class="navigation navigation-next " aria-label="Next page: 安裝 Redmine"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"disqus":{"shortName":"kejyun-ruby-on-rails-books"}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
